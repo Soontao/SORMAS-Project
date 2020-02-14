@@ -280,11 +280,10 @@ if [ ${DEV_SYSTEM} = true ] && [ ${LINUX} != true ]; then
 	cp cacerts.txt ${DOMAIN_DIR}/config/cacerts.jks
 fi
 cp loginsidebar.html ${CUSTOM_DIR}
-cp logindetails.html ${CUSTOM_DIR}
 if [ ${DEMO_SYSTEM} = true ]; then
-	cp demologinmain.html ${CUSTOM_DIR}/loginmain.html
+	cp demologindetails.html ${CUSTOM_DIR}/logindetails.html
 else
-	cp loginmain.html ${CUSTOM_DIR}
+	cp logindetails.html ${CUSTOM_DIR}
 fi
 
 
@@ -342,3 +341,9 @@ echo "  - Execute the sormas-update.sh file to populate the database and deploy 
 if [ ${DEV_SYSTEM} != true ]; then
 	echo "  - Configure the apache web server according to the server setup guide"
 fi
+
+# make sure all files is owned by user 'payara'
+chown payara:payara ${ROOT_PREFIX}/opt -R
+chown payara:payara /etc/init.d/payara-sormas
+systemctl daemon-reload
+

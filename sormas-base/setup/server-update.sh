@@ -171,6 +171,9 @@ if [ ! -f $CUSTOM_DIR/logindetails.html ]; then
 	cp logindetails.html ${CUSTOM_DIR}
 fi
 
+# make sure all libs owned by user 'payara' so that payara server could read the lib
+chown payara:payara $DOMAIN_PATH -R
+
 # You can use the following command to use a backup to restore the data in case the automatic database update process during deployment fails:
 # pg_restore --clean -U postgres -Fc -d sormas_db sormas_db_....dump
 
