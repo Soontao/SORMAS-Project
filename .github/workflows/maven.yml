@@ -14,8 +14,16 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: |
-            mvn install -Pwith-dep-poms -f sormas-base/pom.xml
+      run: mvn install -B --no-transfer-progress -Pwith-dep-poms -f sormas-base/pom.xml
+    
+    - name: Build App
+      uses: msfjarvis/setup-android@0.2
+      with:
+        gradleTasks: assembleDebug
+
+    - name: Collect Artifacts
+      run: ant collect-all -buildfile sormas-base/build.xml
+    
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
