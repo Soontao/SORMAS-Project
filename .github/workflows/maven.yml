@@ -15,8 +15,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: |
-            mvn install -Pwith-app -f sormas-base/pom.xml
-            mvn jgitflow:release-start jgitflow:release-finish -Pwith-app,with-dep-poms -f sormas-base/pom.xml
+            mvn install -f sormas-base/pom.xml
+            mvn jgitflow:release-start jgitflow:release-finish -Pwith-dep-poms -f sormas-base/pom.xml
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
