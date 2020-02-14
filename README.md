@@ -1,20 +1,11 @@
-<p align="center">
-  <a href="https://sormas.org/">
-    <img
-      alt="SORMAS - Surveillance, Outbreak Response Management and Analysis System"
-      src="logo.png"
-      height="200"
-    />
-  </a>
-</p>
+
+[![SORMAS - Surveillance, Outbreak Response Management and Analysis System](logo.png)](https://sormas.org)
 
 ![License](https://img.shields.io/badge/license-GPL%20v3-blue)
 ![Latest Release](https://img.shields.io/github/v/release/hzi-braunschweig/SORMAS-Project)
 [![SORMAS BUILD ALL](https://github.com/Soontao/SORMAS-Project/workflows/SORMAS%20BUILD%20ALL/badge.svg?branch=development)](https://github.com/Soontao/SORMAS-Project/actions?query=workflow:"SORMAS+BUILD+ALL")
 
 **SORMAS** (Surveillance Outbreak Response Management and Analysis System) is an open source eHealth system - consisting of separate web and mobile apps - that is geared towards optimizing the processes used in monitoring the spread of infectious diseases and responding to outbreak situations.
-
-
 
 ## Table of Contents
 
