@@ -19,7 +19,7 @@ jobs:
     - name: Build App
       uses: msfjarvis/setup-android@0.2
       with:
-        entrypoint: ./somars-app/gradlew
+        entrypoint: ./sormas-app/gradlew
         args: assembleDebug
 
     - name: Collect Artifacts
