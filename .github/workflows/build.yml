@@ -19,7 +19,6 @@ jobs:
       working-directory: ./sormas-app
       run: |
             chmod +x ./gradlew
-            ./gradlew build
             ./gradlew assembleDebug
 
 
