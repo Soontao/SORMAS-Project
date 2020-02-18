@@ -37,7 +37,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -385,7 +384,6 @@ public class CaseDao extends AbstractAdoDao<Case> {
 
     private void onCaseChanged(Case existingCase, Case changedCase) {
 
-        DatabaseHelper.getSymptomsDao().updateIsSymptomatic(changedCase.getSymptoms());
         changedCase.setCompleteness(calculateCompleteness(changedCase));
         if (existingCase == null) {
             // If a new case is created, use the last available location to update its report latitude and longitude
